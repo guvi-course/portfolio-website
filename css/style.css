@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --text-color: #fff;
+  --bg-color: #1b1f24;
+  --main-color: #f4723d;
+  --other-color: #080808;
+  --h1-font: 4.5rem;
+  --h2-font: 2.9rem;
+  --p-font: 1.25rem;
+}
+
+.main {
+  color: var(--text-color);
+  background-color: #ffe9d9;
+  padding-bottom: 100px;
+}
+
+.navbar {
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
+  background: transparent;
+  transition: all .50s ease;
+}
+
+.logo {
+  font-size: 36px;
+  color: var(--other-color);
+  font-weight: 600;
+}
+
+.navlist {
+  display: flex;
+}
+
+.navlist li {
+  list-style: none;
+}
+
+.navlist a {
+  font-size: var(--p-font);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--other-color);
+  margin-left: 40px;
+  transition: all .50s ease;
+}
+
+.navlist a:hover {
+  color: var(--main-color);
+  text-shadow: 3px 3px 20px var(--main-color);
+}
+
+.top-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.top-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-a {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navlist {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navlist.active {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navlist li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .navlist a {
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+  }
+
+  .top-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .menu-a {
+    display: inline;
+  }
+}
