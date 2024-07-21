@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <title>About</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navbar">
+        <span>
+          <a href="index.html" class="logo">
+            <i
+              class="fa-solid fa-ghost"
+              style="color: #0f0f0e; font-size: 30px"
+            ></i>
+          </a>
+          &nbsp;
+          <a href="#" class="menu-a">
+            <i
+              class="fa-solid fa-bars menu-toggle"
+              style="color: #0f0f0e; font-size: 30px"
+            ></i>
+          </a>
+        </span>
+
+        <ul class="navlist">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="nav-active">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <div class="top-btn">
+          <a href="#">Download CV</a>
+        </div>
+      </nav>
+    </div>
     <h1>About</h1>
-</body>
+
+    <script>
+      const toggleButton = document.querySelector(".menu-toggle");
+      const navList = document.querySelector(".navlist");
+
+      toggleButton.addEventListener("click", () => {
+        navList.classList.toggle("active");
+      });
+    </script>
+  </body>
 </html>

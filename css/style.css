@@ -84,6 +84,10 @@
   display: none;
 }
 
+.nav-active {
+  color: var(--main-color) !important;
+}
+
 @media (max-width: 768px) {
   .navlist {
     display: none;
